@@ -9,12 +9,10 @@ function myFunction() {
   }
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("123").style.display = "none";
-    
-  }
-  
-  function closeNav() {
+}
+
+function closeNav() {
+    document.getElementById("submenu").style.display = "none";
     document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("123").style.display = "block";
-  }
+}
 // ======================End Of HEADER======================================
