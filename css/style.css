@@ -1,6 +1,30 @@
 body {
     background: #fbfbfd;
 }
+/* ========================Header CSS======================== */
+.right-nav {
+   float: right;
+   color: black; !important;
+}
+.right-nav a{
+   color: #5c2be2; !important;
+}
+.spaces{
+
+  margin-right: 60px;
+}
+.navbar{
+  /* font-family: 'Oswald', sans-serif; */
+  font-size: 20px;
+  font-weight: bold;
+  color: black; !important;
+}
+.navbar .right-nav a:hover {
+  background-color: #5c2be2;
+  color: white;
+}
+/* ========================Header CSS======================== */
+
 /* ========================Footer CSS======================== */
 .new_footer_area {
     background: #fbfbfd;
@@ -203,4 +227,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*************footer End*****************/
-
