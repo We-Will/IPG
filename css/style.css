@@ -2,6 +2,10 @@ body {
     background: #fbfbfd;
 }
 /* ========================HEADER CSS=============================== */
+.dropdown-menu {
+    width: 250px !important;
+    top: auto;
+}
 .right-nav {
     float: right;
     color: black; !important;
