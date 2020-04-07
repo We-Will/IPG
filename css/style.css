@@ -28,9 +28,14 @@ body {
    background-color: black;
    color: white;
  }
- #submenu{
+.submenu{
      display:none;
  }
+.submenu a{
+    font-size: 15px !important;
+    font-weight: lighter;
+ }
+ 
 
  .sidenav {
     height: 100%;
@@ -48,7 +53,7 @@ body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
 
     display: block;
     transition: 0.3s
