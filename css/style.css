@@ -25,6 +25,88 @@ body {
 }
 /* ========================Header CSS======================== */
 
+/* ========================HEADER CSS=============================== */
+.dropdown-menu {
+    width: 250px !important;
+    top: auto;
+}
+.right-nav {
+    float: right;
+    color: black; !important;
+ }
+ .right-nav a{
+    color: black; !important;
+ }
+ .spaces{
+
+   margin-right: 25px;
+   padding-top: 25px;
+ }
+ .navbar{
+   /* font-family: 'Oswald', sans-serif; */
+   font-size: 20px;
+   font-weight: bold;
+   color: black; !important;
+ }
+ .navbar .right-nav a:hover {
+   background-color: black;
+   color: white;
+ }
+.submenu{
+     display:none;
+ }
+.submenu a{
+    font-size: 15px !important;
+    text-align: center;
+    font-weight: lighter;
+
+ }
+
+ .subprop a{
+   padding: 0px 70px 10px 2px !important;
+ }
+
+
+ .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 20px;
+
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* ========================End of HEADER CSS======================== */
 /* ===================================NEWSLETTER=========================================== */
 .subscribe-me p {
     font-size: 14px;
@@ -32,23 +114,21 @@ body {
     width: 80%;
     color: #666666;
 }
-        
         .popup-newsletter {
     border: 1px solid #cccccc;
     display: inline-block;
     width: 100%;
 }
-        
-        
+
+
 .modal-backdrop-test.in {
 
     opacity: .5;
-    
+
 }
 
 .fade.in {
     opacity: .5;
-    
 }
 
 
@@ -71,8 +151,8 @@ body {
 .subscribe-wrap {
     padding: 45px 42px 15px;
 }
-        
-        
+
+
 .subscribe-me .main-title {
     text-align: Center;
     color: #000 !important;
@@ -88,8 +168,8 @@ body {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
-        
-        
+
+
 .subscribe-me {
     background-color: #fff;
     height: auto;
@@ -99,7 +179,7 @@ body {
     padding: 12px;
     right: 0;
     top: 20%;
-    background-image: url('https://images.unsplash.com/photo-1542012713374-595feea1ddf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=340&q=100&h=480'); 
+    background-image: url('https://images.unsplash.com/photo-1542012713374-595feea1ddf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=340&q=100&h=480');
     background-repeat: no-repeat;
     background-position: 100% center;
     box-shadow: 0 2px 3px rgba(0,0,0,0.5);
@@ -114,7 +194,6 @@ body {
     background-color:none !important;
     background:none !important;
 }
-        
 #paragraph_div{
     text-align: Center;
     font-size: 18px;
@@ -123,7 +202,7 @@ body {
     opacity: 0.8;
     width: 100% !important;
     margin: auto auto 30px !important;
-}  
+}
         .
 .subscribe-me .form-control.text {
     border: 2px solid #cccccc;
@@ -136,7 +215,6 @@ body {
     padding: 0 15px;
     width: 100%;
 }
-        
 #button_change{
     display: inline;
     background: red;
@@ -144,13 +222,11 @@ body {
     padding-top: 10px;
     padding-bottom: 8px;
 }
-        
 .list-inline {
     padding-left: 0;
     margin-left: -5px;
     list-style: none;
 }
-        
 @media only screen and (max-width: 767px){
      .subscribe-me {
         background-color: #fff;
@@ -160,12 +236,11 @@ body {
         padding: 12px;
         right: 0;
         top: 0%;
-    background-image: url('https://images.unsplash.com/photo-1542012713374-595feea1ddf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=100&h=600'); 
+    background-image: url('https://images.unsplash.com/photo-1542012713374-595feea1ddf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=100&h=600');
         background-repeat: no-repeat;
         background-position: 100% center;
         width: 100%;
         }
-    
 .subscribe-me .main-title {
     text-align: Center;
     color: #000 !important;
@@ -180,16 +255,16 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-}        
-   
+}
+
         #email_popup{
             width: 100% !important;
             margin-bottom: 25px;
         }
-            
-    
+
+
 }
-        
+
  @media only screen and (max-width:689px){
      .subscribe-me {
         background-color: #fff;
@@ -199,12 +274,11 @@ body {
         padding: 12px;
         right: 0;
         top: 0%;
-    background-image: none; 
+    background-image: none;
         background-repeat: no-repeat;
         background-position: 100% center;
         width: 100%;
         }
-    
 .subscribe-me .main-title {
     text-align: Center;
     color: #000 !important;
@@ -219,31 +293,31 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-}        
-   
+}
+
         #email_popup{
             width: 100% !important;
             margin-bottom: 25px;
         }
-     
+
      .col-xs-7 {
     width: 100%;
 }
-            
-    
-}       
+
+
+}
 
 
  @media only screen and (max-width:489px){
 .subscribe-me .main-title {
     font-size: 23px;
-}  
-   
+}
+
 }
 
  /* =================================NEWSLETTER====================================*/
 
-/* ========================Footer CSS======================== */
+/* ========================Footer CSS=============================== */
 .new_footer_area {
     background: #fbfbfd;
 }

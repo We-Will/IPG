@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -18,24 +19,61 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
 
-        <a class="navbar-brand" href="#">LOGO</a>
+        <a class="navbar-brand " href="index.html"><img src="img/logo/HKlogo.jpg" width="190px" height="70px" alt=""></a>
 
         <div class="right-nav">
           <ul class="nav navbar-nav">
             <li class="spaces"><a class="nav-link" href="#">OUR PROPERTIES</a></li>
             <li class="spaces"><a class="nav-link" href="#">ADVICE</a></li>
-            <li class="spaces"><a class="nav-link" href="#">CALCULATOR</a></li>
+            <li class="spaces dropdown">
+              <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CALCULATOR
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Land Transfer TAX</a></li>
+                <li><a href="#">CMHC Insurance Calculator</a></li>
+                <li><a href="#">Mortgage Calculator</a></li>
+                <li><a href="#">Mortgage Affordability</a></li>
+              </ul>
+            </li>
             <li class="spaces"><a class="nav-link" href="#">CONTACT</a></li>
+            <li class="spaces">
+              <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#"  onclick="myFunction_properties()">Our Properties<span class="caret"></span></a>
+                <div id="submenu_properties" class="submenu subprop">
+                <a href="#">Sold</a>
+                <a href="#">Rental</a>
+                <a href="#">Listing</a>
+                <a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IPG Management</a>
+                </div>
+                <a href="#">Neighbourhood</a>
+                <a href="#">Newsletter</a>
+                <a href="#">Contact US</a>
+                <a href="#">Advice</a>
+                <a href="#" onclick="myFunction_calculator()">Calculator<span class="caret"></span></a>
+                <div id="submenu_calculator" class="submenu ">
+                  <a href="#">Land Transfer Tax</a>
+                  <a href="#">CMHC Insurance Calculator</a>
+                  <a href="#">Mortgage Calculator</a>
+                  <a href="#">Mortgage Affordability</a>
+                  </div>
+                <a href="#">My Account</a>
+              </div>
+              <span style="font-size:30px;cursor:pointer;" id="123" onclick="openNav()">&#9776; </span>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </div>
 <header>
-<!-- =====================================HEADER============================================== -->
+<!-- =====================================End ofHEADER============================================== -->
+
 <!-- ===================================NEWSLETTER================================================= -->
 <section class="subscribe-me" runat="server" id="subscribe_div" style="z-index:9999999">
-  <a href="#close" class="sb-close-btn icon_close"></a>      
+  <a href="#close" class="sb-close-btn icon_close"></a>
   <div class="popup-newsletter" style="position:relative;">
       <div class="col-xs-7 col-md-7 col-sm-7 text-center">
           <div class="subscribe-wrap">
@@ -49,17 +87,17 @@
                       <input type="text" class="form-control text" ID="email_popup" style="display: inline;width: 60%;" placeholder="Enter your email address">
                           <a href="javascript:checkIfEmail();" runat="server" id="button_change" class="btn small-btn">Subscribe Now</a>
                       </div>
-                  </div>   
+                  </div>
                   <div class="alert alert-danger" id="notValidEmail" style="position:absolute; width:100%; top:0; left:50%; transform: translate(0,-50%); display:none;" role="alert">
-                    <strong>Email is not valid, Please Try Again!</strong> 
+                    <strong>Email is not valid, Please Try Again!</strong>
                   </div>
                    <div class="alert alert-success" id="ValidEmail" style="position:absolute; width:100%; top:0; left:50%; transform: translate(0,-50%); display:none;" role="alert">
-                    <strong>Thank you, Your information has been submitted!</strong> 
+                    <strong>Thank you, Your information has been submitted!</strong>
                   </div>
-                   <div class="form-group" style="margin-bottom:0;">                                
+                   <!-- <div class="form-group" style="margin-bottom:0;">
                       <label class="checkbox-inline black-color">
-                          <asp:CheckBox ID="CheckBox1" runat="server" /> <span runat="server" id="span_div" > Don't show this popup again </span> </label>                                
-                  </div>
+                          <asp:CheckBox ID="CheckBox1" runat="server" /> <span runat="server" id="span_div" > Don't show this popup again </span> </label>
+                  </div> -->
 
           <div class="col-md-12 text-right" style="margin-top:20px; font-size:18px;" runat="server" id="socialmedia_div" visible="false">
                   <ul class="list-inline social-link" style="align:center;">
@@ -79,7 +117,7 @@
 
 <!-- =====================================FOOTER============================================== -->
 <footer class='new_footer_area bg_color footer'>
-  <div class='new_footer_top'> <div class='container'>   <div class='row'>   <div class='col-lg-3 col-md-6'>
+   <div class='new_footer_top'>   <div class='container'>   <div class='row'>   <div class='col-lg-3 col-md-6'>
       <div class='f_widget company_widget wow fadeInLeft' data-wow-delay='0.2s' style='visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;'>
        <h3 class='f-title f_600 t_color f_size_18'>Get in Touch</h3>
        <p>Daily neighbourhood updates on the latest new, sold & open houses!</p>
@@ -129,6 +167,6 @@
   </div>
   </div>
 </footer>
-<!-- ==================================================================================== -->
+<!-- =====================================End of FOOTER=============================================== -->
 </body>
 </html>
