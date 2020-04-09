@@ -2,6 +2,48 @@ body {
     background: #fbfbfd;
 }
 /* ========================HEADER CSS=============================== */
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* ********************************* */
+@media screen and (min-width: 450px) {
+    ul li {
+        display: inline-flex;
+      }
+}
+@media screen and (max-width: 450px) {
+ul li {
+  display: inline-block;
+}
+}
+img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* slider */
+.slider, .slider ul.carousel, .slider ul.carousel li {
+  height: 650px;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+/* pagnation  <- -> */
+.slider ul.sliderpagnation li a {
+  color: #ccc;
+}
+
+.slider ul.sliderpagnation li.selected a {
+  color: #937AFF;
+}
+
+
+
 .dropdown-menu {
     width: 250px !important;
     top: auto;

@@ -15,6 +15,34 @@ function myFunction_properties() {
       x.style.display = "none";
     }
   }
+  
+
+jQuery(document).ready(function() {
+  "use strict";
+  $(".carousel").carouFredSel({
+    responsive: true,
+    width: "100%",
+    circular: true,
+    scroll: {
+      item: 1,
+      duration: 1000,
+      
+    },
+    auto: true,
+    items: {
+      visible: {
+        min: 1,
+        max: 1
+      },
+      height: "variable"
+    },
+    pagination: {
+      container: ".sliderpagnation",
+      anchorBuilder: false
+    }
+  });
+});
+
 
 
   function openNav() {
