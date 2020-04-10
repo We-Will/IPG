@@ -52,4 +52,24 @@ function closeNav() {
     }
 
 }
-// ----------------------------------------NEWSLETTER---------------------------------------------------
+// ----------------------------------------End NEWSLETTER---------------------------------------------------
+// ----------------------------------------Testimonial---------------------------------------------------
+const pics = document.querySelector(".testimonial-pics");
+const textFull = document.querySelector(".testimonial-contents");
+
+for (pic of pics.children) {
+ pic.addEventListener("click", function() {
+   for (elem of pics.children) {
+     elem.classList.remove("active");
+   }
+   this.classList.add("active");
+
+   const current = Number(this.getAttribute("id"));
+
+   for (text of textFull.children) {
+     text.classList.remove("active");
+   }
+   textFull.children[current].classList.add("active");
+ });
+}
+// ----------------------------------------End Testimonial---------------------------------------------------
